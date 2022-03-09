@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/REPLACE_ME_IN_PACKAGE_JSON/static/css/main.5e9bdba9.css",
+    "main.js": "/REPLACE_ME_IN_PACKAGE_JSON/static/js/main.abc2d213.js",
+    "index.html": "/REPLACE_ME_IN_PACKAGE_JSON/index.html",
+    "main.5e9bdba9.css.map": "/REPLACE_ME_IN_PACKAGE_JSON/static/css/main.5e9bdba9.css.map",
+    "main.abc2d213.js.map": "/REPLACE_ME_IN_PACKAGE_JSON/static/js/main.abc2d213.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e9bdba9.css",
+    "static/js/main.abc2d213.js"
+  ]
+}
