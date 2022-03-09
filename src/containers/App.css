@@ -1,0 +1,9 @@
+div[class*="col-"], div.col {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+body {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
