@@ -1,10 +1,10 @@
 # How to use this template
 
 - Edit the `homepage` field in `package.json`. This affects the actual URL your webpage will run at.
-- Edit the user agreement and/or software license in `src/containers/UserAgreementDialog.js`.
-- Edit the JSX code in `src/containers/App.js`
-- Run `npm start` to start dev server
-- Run `npm deploy` to deploy results to gh-pages (You must configure Github to use `published` branch for gh-pages)
+- Edit the user agreement and/or software license in `src/components/UserAgreementDialog.js`.
+- Edit the JSX code in `src/components/App.js`
+- Run `yarn start` to start dev server
+- Run `yarn deploy` to deploy results to gh-pages (You must configure Github to use `published` branch for gh-pages)
 
 # Disclaimers
 
