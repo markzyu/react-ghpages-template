@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { createStore } from 'redux';
 
 import App from './App';
-import rootReducer from '../reducers';
+import { rootReducer } from '../store';
 
 const exampleApp = () => render(
   <Provider store={createStore(rootReducer)}>

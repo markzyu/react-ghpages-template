@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import DismissDialog from '../components/DismissDialog';
-import { dismissError } from '../actions';
+import DismissDialog from './DismissDialog.js';
+import { dismissError } from '../store/exampleSlice.js';
 
 const ErrorDialog = props => {
   const sendClose = () => props.dispatch(dismissError());
   return (
-    <DismissDialog title="Error Message" show={props.showError} onDismiss={sendClose} className="error-modal">
+    <DismissDialog title="Message" show={props.showError} onDismiss={sendClose} className="error-modal">
       {props.errorMsg}
     </DismissDialog>
   )
@@ -20,8 +20,8 @@ ErrorDialog.propTypes = {
 }
 
 const mapStateToProps = (state, props) => ({
-  showError: state.errors.showDialog,
-  errorMsg: state.errors.msg,
+  showError: state.example.showError,
+  errorMsg: state.example.errMessage || "",
 });
 
 export const ErrorDialogTestable = ErrorDialog;

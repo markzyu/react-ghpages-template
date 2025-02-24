@@ -16,7 +16,7 @@ test('Sends dismissError action when clicking Dialog hide button', () => {
 
   expect(mockDispatch).toHaveBeenCalledTimes(1);
   let action = mockDispatch.mock.calls[0][0];
-  expect(action.type).toBe('DISMISS_ERROR');
+  expect(action.type).toBe('example/dismissError');
 });
 
 test('Shows the error message', () => {

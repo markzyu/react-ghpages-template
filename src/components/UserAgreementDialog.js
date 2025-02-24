@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import DismissDialog from '../components/DismissDialog';
-import { loadAgreementStatus } from '../actions';
-import { getAgreementRead, setAgreementRead } from '../store';
+import DismissDialog from './DismissDialog.js';
+import { setAgreementUiStatus } from '../store/exampleSlice.js';
+import { getAgreementRead, setAgreementRead } from '../localStorage/index.js';
 
 const UADialog = props => {
   const sendAgree = () => {
     setAgreementRead(true);
-    props.dispatch(loadAgreementStatus(getAgreementRead()));
+    props.dispatch(setAgreementUiStatus(getAgreementRead()));
   };
   return (
     <DismissDialog title="User Agreement" show={props.showAgreement} onDismiss={sendAgree} className="error-modal">
@@ -56,7 +56,7 @@ UADialog.propTypes = {
 }
 
 const mapStateToProps = (state, props) => ({
-  showAgreement: !state.agreement.agreed,
+  showAgreement: !state.example.hasAgreed,
 });
 
 export const UADialogTestable = UADialog;

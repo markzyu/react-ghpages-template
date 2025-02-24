@@ -1,7 +1,8 @@
-const KEY_USER_AGREEMENT_READ = "metav1-user-agreement-read";
+import { createStore, combineReducers } from 'redux'
+import example from './exampleSlice';
 
-export const setAgreementRead = boolVal => {
-  window.localStorage.setItem(KEY_USER_AGREEMENT_READ, JSON.stringify(boolVal));
-}
+export const rootReducer = combineReducers({
+  example,
+});
 
-export const getAgreementRead = () => !!JSON.parse(window.localStorage.getItem(KEY_USER_AGREEMENT_READ));
+export const defaultStore = createStore(rootReducer);

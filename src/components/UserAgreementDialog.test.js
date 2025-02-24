@@ -16,6 +16,6 @@ test('Sends loadAgreementStatus action when clicking Dialog hide button', () => 
 
   expect(mockDispatch).toHaveBeenCalledTimes(1);
   let action = mockDispatch.mock.calls[0][0];
-  expect(action.type).toBe('LOAD_USER_AGREEMENT_STATUS');
-  expect(action.agreed).toBe(true);
+  expect(action.type).toBe('example/setAgreementUiStatus');
+  expect(action.payload).toBe(true);
 });

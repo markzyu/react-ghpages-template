@@ -9,25 +9,20 @@ import ErrorDialog from './ErrorDialog.js';
 import './App.css';
 import UserAgreementDialog from './UserAgreementDialog.js';
 import { Button } from 'react-bootstrap';
-import { showError } from '../actions/index.js';
+import { showError } from '../store/exampleSlice.js';
 
 const App = props => {
   const dispatch = useDispatch();
-  const throwError = () => {
-    try {
-      undefined();
-    } catch (err) {
-      console.log(err);
-      dispatch(showError(err.toString()));
-    }
-  }
+  const showDialog = () => {
+    dispatch(showError("This is an example dialog"));
+  };
   return (
     <Container>
       <Row>
         This is just a template
       </Row>
       <br/>
-      <Button onClick={throwError}>Throw an Error</Button>
+      <Button onClick={showDialog}>Show example dialog</Button>
       <ErrorDialog />
       <UserAgreementDialog />
     </Container>
